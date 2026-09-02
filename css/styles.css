@@ -32,11 +32,11 @@ img {
    ========================== */
 :root {
     /* Color */
-    --color-bg: #fafafa;
-    --color-surface: #ffffff;
-    --color-text: #1f2937;
-    --color-muted: #6b7280;
-    --color-accent: #0369a1;
+    --color-bg: #fbcdcd;
+    --color-surface: #ea1515;
+    --color-text: #327de6;
+    --color-muted: #a8ab11;
+    --color-accent: #8cd7ff;
 
     /* Spacing — a modular scale */
     --space-sm: 0.5rem;
