@@ -13,57 +13,57 @@
 /* ==========================
    1. RESET
    ========================== */
-   *,
+*,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+max-width: 100%;
+height: auto;
+display: block;
 }
 /* ==========================
    2. DESIGN TOKENS
-   
    ========================== */
 :root {
-    /* Color */
-    --color-bg: #ffdbdb;
-    --color-surface: #ea1515;
-    --color-text: #2c00a4;
-    --color-muted: #ff9090;
-    --color-accent: #c6ebff;
+/* Color */
+--color-bg: #f5eafc;
+--color-surface: #ea1515;
+--color-text: #000000;
+--color-muted: #e0d8d8;
+--color-accent: #c6ebff;
 
-    /* Spacing — a modular scale */
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 1.5rem;
-    --space-xl: 2rem;
+/* Spacing — a modular scale */
+--space-sm: 0.5rem;
+--space-md: 1rem;
+--space-lg: 1.5rem;
+--space-xl: 2rem;
 
-    /* Typography */
-    --text-base: 1rem;
-    --text-h3: 1.25rem;
-    --text-h2: 1.5rem;
-    --text-h1: 2.25rem;
-    --leading-body: 1.6;
-    --leading-heading: 1.2;
+/* Typography */
+--text-base: 1rem;
+--text-h3: 1.25rem;
+--text-h2: 1.5rem;
+--text-h1: 2.25rem;
+--leading-body: 1.6;
+--leading-heading: 1.2;
 
-    /* Layout */
-    --page-width: 64rem;
-    --reading-width: 70ch;
+/* Layout */
+--page-width: 64rem;
+--reading-width: 70ch;
+}
 
 /* ==========================
    3. BASE ELEMENT STYLES
    ========================== */
 body {
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    font-size: var(--text-base);
-    line-height: var(--leading-body);
+background-color: var(--color-bg);
+color: var(--color-text);
+font-size: var(--text-base);
+line-height: var(--leading-body);
 }
 
 h1 { font-size: var(--text-h1); line-height: var(--leading-heading); }
@@ -79,7 +79,20 @@ a { color: var(--color-accent); }
    4. LAYOUT
    ========================== */
 body {
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding: var(--space-lg) var(--space-md);
+max-width: var(--page-width);
+margin: 0 auto;
+padding: var(--space-lg) var(--space-md);
+}
+
+/* ==========================
+   5. FIGURE / PHOTO
+   ========================== */
+figure {
+float: right;
+max-width: 300px;
+margin: 0 0 var(--space-md) var(--space-lg);
+}
+
+header {
+overflow: auto;
 }
