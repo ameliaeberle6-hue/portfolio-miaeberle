@@ -25,7 +25,6 @@ img {
     --color-muted:  #e0d8d8;
     --color-accent: #c6ebff;
     --color-surface-alt: #ffffff;
-    --color-page-outer: #f4f4f6;
 
     /* Spacing — a modular scale */
     --space-sm: 0.5rem;
@@ -54,7 +53,7 @@ img {
    3. BASE ELEMENT STYLES
    ============================ */
 body {
-    background-color: var(--color-page-outer);
+    background-color: var(--color-bg);
     color: var(--color-text);
     font-size: var(--text-base);
     line-height: var(--leading-body);
@@ -75,10 +74,8 @@ a { color: var(--color-accent); }
    ============================ */
 .page {
     max-width: var(--page-width);
-    margin: var(--space-xl) auto;
+    margin: 0 auto;
     padding: var(--space-xl);
-    background-color: var(--color-bg);
-    border-radius: var(--radius-md);
 }
 
 /* Top bar: name + nav */
