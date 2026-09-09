@@ -120,6 +120,15 @@ header div {
     text-align: center;
 }
 
+.header-pic {
+    flex: 0 1 18rem;
+}
+
+.header-pic img {
+    width: 100%;
+    border-radius: var(--radius-md);
+}
+
 /* nav + section spacing */
 nav a {
     color: var(--color-text);
@@ -164,4 +173,7 @@ section, aside {
 
 .skill-card {
     flex: 1;
+    border: 2px solid var(--color-muted);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
 }
