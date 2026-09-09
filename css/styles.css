@@ -4,57 +4,57 @@
 *,
 *::before,
 *::after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 img {
-max-width: 100%;
-height: auto;
-display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 /* ============================
    2. DESIGN TOKENS
    ============================ */
 :root {
-/* Color */
---color-bg:  #f5eafc;
---color-surface: #ea1515;
---color-text:  #000000;
---color-muted:  #e0d8d8;
---color-accent: #c6ebff;
---color-surface-alt: #e0d8d8;
+    /* Color */
+    --color-bg:  #f5eafc;
+    --color-surface: #ea1515;
+    --color-text:  #000000;
+    --color-muted:  #e0d8d8;
+    --color-accent: #c6ebff;
+    --color-surface-alt: #e0d8d8;
 
-/* Spacing — a modular scale */
---space-sm: 0.5rem;
---space-md: 1rem;
---space-lg: 1.5rem;
---space-xl: 2rem;
+    /* Spacing — a modular scale */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
 
-/* Typography */
---text-base: 1rem;
---text-h3: 1.25rem;
---text-h2: 1.5rem;
---text-h1: 2.25rem;
---leading-body: 1.6;
---leading-heading: 1.2;
---font-stack: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    /* Typography */
+    --text-base: 1rem;
+    --text-h3: 1.25rem;
+    --text-h2: 1.5rem;
+    --text-h1: 2.25rem;
+    --leading-body: 1.6;
+    --leading-heading: 1.2;
+    --font-stack: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-/* Layout */
---page-width: 64rem;
---reading-width: 70ch;
---radius-md: 8px;
+    /* Layout */
+    --page-width: 64rem;
+    --reading-width: 70ch;
+    --radius-md: 8px;
 }
 /* ============================
    3. BASE ELEMENT STYLES
    ============================ */
 body {
-background-color: var(--color-bg);
-color: var(--color-text);
-font-size: var(--text-base);
-line-height: var(--leading-body);
-font-family: var(--font-stack);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-size: var(--text-base);
+    line-height: var(--leading-body);
+    font-family: var(--font-stack);
 }
 
 h1 { font-size: var(--text-h1); line-height: var(--leading-heading); }
@@ -70,37 +70,37 @@ a { color: var(--color-accent); }
    4. LAYOUT
    ============================ */
 body {
-max-width: var(--page-width);
-margin: 0 auto;
-padding: var(--space-lg) var(--space-md);
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-md);
 }
 
 /* Header layout */
 header {
-display: flex;
-gap: var(--space-md);
-padding: var(--space-lg);
-background-color: var(--color-surface-alt);
-border-radius: var(--radius-md);
-min-height: 18rem;
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background-color: var(--color-surface-alt);
+    border-radius: var(--radius-md);
+    min-height: 18rem;
 }
 
 header div {
-flex: 1;
+    flex: 1;
 }
 
 /* nav + section spacing */
 nav a {
-color: var(--color-text);
+    color: var(--color-text);
 }
 nav a:hover {
-color: var(--color-accent);
+    color: var(--color-accent);
 }
 
 section, aside {
-margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-xl);
 }
 
 p {
-max-width: var(--reading-width);
+    max-width: var(--reading-width);
 }
