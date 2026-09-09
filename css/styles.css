@@ -22,9 +22,10 @@ img {
     --color-bg:  #f5eafc;
     --color-surface: #ea1515;
     --color-text:  #000000;
-    --color-muted:  #ffffff;
+    --color-muted:  #e0d8d8;
     --color-accent: #c6ebff;
-    --color-surface-alt: #fdfbff;
+    --color-surface-alt: #ffffff;
+    --color-page-outer: #f4f4f6;
 
     /* Spacing — a modular scale */
     --space-sm: 0.5rem;
@@ -45,12 +46,15 @@ img {
     --page-width: 64rem;
     --reading-width: 70ch;
     --radius-md: 8px;
+
+    /* Effects */
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 /* ============================
    3. BASE ELEMENT STYLES
    ============================ */
 body {
-    background-color: var(--color-bg);
+    background-color: var(--color-page-outer);
     color: var(--color-text);
     font-size: var(--text-base);
     line-height: var(--leading-body);
@@ -69,24 +73,50 @@ a { color: var(--color-accent); }
 /* ============================
    4. LAYOUT
    ============================ */
-body {
+.page {
     max-width: var(--page-width);
-    margin: 0 auto;
-    padding: var(--space-lg) var(--space-md);
+    margin: var(--space-xl) auto;
+    padding: var(--space-xl);
+    background-color: var(--color-bg);
+    border-radius: var(--radius-md);
+}
+
+/* Top bar: name + nav */
+.site-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+}
+
+.site-name {
+    font-weight: bold;
+    font-size: var(--text-h3);
+}
+
+.site-bar nav a {
+    color: var(--color-accent);
+    font-weight: bold;
 }
 
 /* Header layout */
 header {
     display: flex;
+    align-items: center;
     gap: var(--space-md);
     padding: var(--space-lg);
     background-color: var(--color-surface-alt);
     border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
     min-height: 18rem;
 }
 
 header div {
     flex: 1;
+}
+
+.header-text {
+    text-align: center;
 }
 
 /* nav + section spacing */
@@ -103,4 +133,25 @@ section, aside {
 
 p {
     max-width: var(--reading-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Intro + skills sections */
+#learn, #skills {
+    text-align: center;
+}
+
+#learn h2, #skills h2 {
+    text-decoration: underline;
+}
+
+.skills-grid {
+    display: flex;
+    gap: var(--space-lg);
+    list-style: none;
+}
+
+.skill-card {
+    flex: 1;
 }
