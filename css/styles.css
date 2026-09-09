@@ -128,7 +128,7 @@ section, aside {
     margin-bottom: var(--space-xl);
 }
 
-p {
+.header-text p, #learn p {
     max-width: var(--reading-width);
     margin-left: auto;
     margin-right: auto;
@@ -137,6 +137,15 @@ p {
 /* Intro + skills sections */
 #learn, #skills {
     text-align: center;
+}
+
+#learn h2, #skills h2 {
+    text-decoration: underline;
+}
+
+/* Projects / Contact / Resources — left aligned, underlined headings */
+#projects h2, #contact h2, #resources h2 {
+    text-decoration: underline;
 }
 
 #learn h2, #skills h2 {
