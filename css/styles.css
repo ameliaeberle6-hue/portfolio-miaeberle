@@ -89,10 +89,13 @@ a { color: var(--color-accent); }
 .site-name {
     font-weight: bold;
     font-size: var(--text-h3);
+    margin: 0;
+    max-width: none;
+    text-align: left;
 }
 
 .site-bar nav a {
-    color: var(--color-accent);
+    color: var(--color-text);
     font-weight: bold;
 }
 
@@ -106,6 +109,7 @@ header {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-card);
     min-height: 18rem;
+    margin-bottom: var(--space-xl);
 }
 
 header div {
@@ -148,8 +152,8 @@ section, aside {
     text-decoration: underline;
 }
 
-#learn h2, #skills h2 {
-    text-decoration: underline;
+#skills {
+    margin-top: var(--space-xl);
 }
 
 .skills-grid {
