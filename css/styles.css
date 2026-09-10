@@ -19,11 +19,11 @@ img {
    ============================ */
 :root {
     /* Color */
-    --color-bg:  #f5f5f5;
-    --color-surface: #ea1515;
+    --color-bg:  #f2f2f2;
+    --color-surface: #000000;
     --color-text:  #000000;
-    --color-muted:  #e0d8d8;
-    --color-accent: #c6ebff;
+    --color-muted:  #f2eeee;
+    --color-accent: #013bfd;
     --color-surface-alt: #ffffff;
 
     /* Spacing — a modular scale */
@@ -69,6 +69,8 @@ p { margin-bottom: var(--space-md); }
 p:last-child { margin-bottom: 0; }
 
 a { color: var(--color-accent); }
+
+ul { list-style: none; }
 /* ============================
    4. LAYOUT
    ============================ */
@@ -152,6 +154,53 @@ section, aside {
     text-decoration: underline;
 }
 
+#projects, #contact, #resources {
+    background-color: var(--color-surface-alt);
+    border-left: 4px solid var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    padding: var(--space-lg);
+}
+
+.project-card {
+    border-top: 1px solid var(--color-muted);
+    padding-top: var(--space-md);
+}
+
+.project-card time {
+    color: #666666;
+    font-size: 0.9rem;
+}
+
+#contact ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-lg);
+}
+
+#contact a, #resources a {
+    font-weight: 600;
+}
+
+#resources ul {
+    display: grid;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+#resources strong {
+    display: inline-block;
+    border-top: 2px solid var(--color-accent);
+    padding-top: var(--space-sm);
+}
+
+footer {
+    padding: 0 var(--space-xl) var(--space-xl);
+    text-align: center;
+    color: #666666;
+    font-size: 0.9rem;
+}
+
 #skills {
     margin-top: var(--space-xl);
 }
@@ -164,7 +213,7 @@ section, aside {
 
 .skill-card {
     flex: 1;
-    border: 2px solid var(--color-muted);
+    border: 2px solid var(--color-surface);
     border-radius: var(--radius-md);
     padding: var(--space-md);
 }
@@ -172,12 +221,14 @@ section, aside {
 .mini-photos {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: var(--space-sm);
-    width: 6rem;
+    width: 100%;
     margin: 0 auto var(--space-xl);
 }
 
 .mini-photos img {
+    width: 6rem;
     border-radius: var(--radius-md);
     aspect-ratio: 1 / 1;
     object-fit: cover;
