@@ -168,3 +168,18 @@ section, aside {
     border-radius: var(--radius-md);
     padding: var(--space-md);
 }
+
+.mini-photos {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-sm);
+    width: 6rem;
+    margin: 0 auto var(--space-xl);
+}
+}
+
+.mini-photos img {
+    border-radius: var(--radius-md);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
