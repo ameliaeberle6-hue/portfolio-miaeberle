@@ -19,7 +19,7 @@ img {
    ============================ */
 :root {
     /* Color */
-    --color-bg:  #f5eafc;
+    --color-bg:  #f5f5f5;
     --color-surface: #ea1515;
     --color-text:  #000000;
     --color-muted:  #e0d8d8;
@@ -175,7 +175,6 @@ section, aside {
     gap: var(--space-sm);
     width: 6rem;
     margin: 0 auto var(--space-xl);
-}
 }
 
 .mini-photos img {
