@@ -27,6 +27,7 @@ img {
     --color-muted: #f2eeee;
     --color-accent: #013bfd;
     --color-surface-alt: #ffffff;
+    --color-border: #d9d9d9;
  
     /* Spacing — a modular scale */
     --space-sm: 0.5rem;
@@ -50,6 +51,7 @@ img {
  
     /* Effects */
     --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 /* ============================
    3. BASE ELEMENT STYLES
@@ -83,11 +85,23 @@ ul { list-style: none; }
 }
  
 /* Top bar: name + nav */
-.site-bar {
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
     margin-bottom: var(--space-lg);
+}
+
+.nav-container > * {
+    min-width: 12rem;
+}
+
+.nav-container nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
 }
  
 .site-name {
@@ -106,6 +120,7 @@ ul { list-style: none; }
 /* Header layout */
 header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: var(--space-md);
     padding: var(--space-lg);
@@ -118,6 +133,7 @@ header {
  
 header div {
     flex: 1;
+    min-width: 12rem;
 }
  
 .header-text {
@@ -165,8 +181,10 @@ section, aside {
 }
  
 .project-card {
-    border-top: 1px solid var(--color-muted);
-    padding-top: var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-md);
 }
  
 .project-card time {
@@ -206,15 +224,47 @@ footer {
 #skills {
     margin-top: var(--space-xl);
 }
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.about-image {
+    flex: 1;
+    min-width: 12rem;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: var(--radius-md);
+}
+
+.about-text {
+    flex: 2;
+    min-width: 12rem;
+    max-width: var(--reading-width);
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
  
 .skills-grid {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-lg);
     list-style: none;
+    padding-left: 0;
 }
  
 .skill-card {
     flex: 1;
+    min-width: 12rem;
     border: 2px solid var(--color-surface);
     border-radius: var(--radius-md);
     padding: var(--space-md);
