@@ -227,13 +227,7 @@ section, aside {
     gap: var(--space-sm);
     margin-bottom: var(--space-lg);
 }
- 
-#resources strong {
-    display: inline-block;
-    border-top: var(--border-medium) solid var(--color-accent);
-    padding-top: var(--space-sm);
-}
- 
+
 footer {
     padding: 0 var(--space-xl) var(--space-xl);
     text-align: center;
