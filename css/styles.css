@@ -25,10 +25,10 @@ img {
     --color-text: #000000;
     --color-text-muted: #666666;
     --color-muted: #f2eeee;
-    --color-accent: #013bfd;
+    --color-accent: #047857;
     --color-surface-alt: #ffffff;
     --color-border: #d9d9d9;
-     --color-accent: #047857;   /* or whichever you chose */
+     --color-accent: #047857;
  
     /* Spacing — a modular scale */
     --space-sm: 0.5rem;
