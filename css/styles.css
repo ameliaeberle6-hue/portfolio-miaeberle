@@ -239,6 +239,12 @@ footer {
     border-radius: var(--radius-md);
 }
 
+.about-photo {
+    width: 12rem;
+    border-radius: var(--radius-md);
+    margin-top: var(--space-sm);
+}
+
 .about-text {
     flex: 2;
     min-width: 12rem;
