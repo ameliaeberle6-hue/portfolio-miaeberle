@@ -76,8 +76,13 @@ a { color: var(--color-accent); }
  
 ul { list-style: none; }
 /* ============================
+   /* ==========================
    4. LAYOUT
-   ============================ */
+   Breakpoints used in this file:
+     768px  — tablet and larger
+   (CSS variables cannot be used inside @media conditions,
+    so breakpoints are documented here instead of tokenized.)
+   ========================== */
 .page {
     max-width: var(--page-width);
     margin: 0 auto;
@@ -164,7 +169,6 @@ section, aside {
     text-decoration: underline;
 }
  
-/* Projects / Contact / Resources — left aligned, underlined headings */
 #projects h2, #contact h2, #resources h2 {
     text-decoration: underline;
 }
@@ -252,25 +256,29 @@ footer {
 }
 
 .project-list {
-    display: flex;
-    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: var(--space-lg);
+}
+@media (min-width: 768px) {
+    .project-list { grid-template-columns: 1fr 1fr; }
+    .project-card.featured { grid-column: span 2; }
 }
  
 .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-lg);
     list-style: none;
     padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: var(--space-md);
 }
  
 .skill-card {
-    flex: 1;
-    min-width: 12rem;
-    border: 2px solid var(--color-border-strong);
-    border-radius: var(--radius-md);
     padding: var(--space-md);
+    background-color: var(--color-surface-alt);
+    border-radius: var(--radius-md);
 }
  
 .mini-photos {
@@ -288,4 +296,6 @@ footer {
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
+
+
  
