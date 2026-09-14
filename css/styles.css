@@ -21,7 +21,7 @@ img {
 :root {
     /* Color */
     --color-bg: #f2f2f2;
-    --color-surface: #000000;
+    --color-border-strong: #000000;
     --color-text: #000000;
     --color-text-muted: #666666;
     --color-muted: #f2eeee;
@@ -98,7 +98,7 @@ ul { list-style: none; }
     min-width: 12rem;
 }
 
-.nav-container nav {
+.nav-links {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-lg);
@@ -112,7 +112,7 @@ ul { list-style: none; }
     text-align: left;
 }
  
-.site-bar nav a {
+.nav-links a {
     color: var(--color-text);
     font-weight: bold;
 }
@@ -174,7 +174,7 @@ section, aside {
  
 #projects, #contact, #resources {
     background-color: var(--color-surface-alt);
-    border-left: 4px solid var(--color-surface);
+    border-left: 4px solid var(--color-border-strong);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-card);
     padding: var(--space-lg);
@@ -265,7 +265,7 @@ footer {
 .skill-card {
     flex: 1;
     min-width: 12rem;
-    border: 2px solid var(--color-surface);
+    border: 2px solid var(--color-border-strong);
     border-radius: var(--radius-md);
     padding: var(--space-md);
 }
