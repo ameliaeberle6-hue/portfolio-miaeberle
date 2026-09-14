@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@400;700&display=swap');
 /* ============================
    1. RESET
    ============================ */
@@ -42,8 +42,8 @@ img {
     --text-h1: 2.25rem;
     --leading-body: 1.6;
     --leading-heading: 1.2;
-    --font-stack: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
- 
+    --font-stack: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Lora', Georgia, serif;
     /* Layout */
     --page-width: 64rem;
     --reading-width: 70ch;
@@ -64,9 +64,13 @@ body {
     font-family: var(--font-stack);
 }
  
-h1 { font-size: var(--text-h1); line-height: var(--leading-heading); }
-h2 { font-size: var(--text-h2); line-height: var(--leading-heading); }
-h3 { font-size: var(--text-h3); line-height: var(--leading-heading); }
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    line-height: var(--leading-heading);
+}
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
  
 h1, h2, h3 { margin-bottom: var(--space-sm); }
 p { margin-bottom: var(--space-md); }
