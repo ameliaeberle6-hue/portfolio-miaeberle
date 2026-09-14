@@ -1,5 +1,3 @@
-# portfolio-miaeberle
-My WRIT40363 portfolio
 # Mia Eberle — Personal Portfolio
 
 A portfolio site built from scratch in HTML and CSS for WRIT 40363.

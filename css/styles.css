@@ -28,19 +28,20 @@ img {
     --color-accent: #047857;
     --color-surface-alt: #ffffff;
     --color-border: #d9d9d9;
-     --color-accent: #047857;
  
     /* Spacing — a modular scale */
     --space-sm: 0.5rem;
     --space-md: 1rem;
     --space-lg: 1.5rem;
     --space-xl: 2rem;
+    --column-min: 12rem;
  
     /* Typography */
     --text-base: 1rem;
     --text-h3: 1.25rem;
     --text-h2: 1.5rem;
     --text-h1: 2.25rem;
+    --text-small: 0.9rem;
     --leading-body: 1.6;
     --leading-heading: 1.2;
     --font-stack: 'Inter', system-ui, -apple-system, sans-serif;
@@ -49,6 +50,13 @@ img {
     --page-width: 64rem;
     --reading-width: 70ch;
     --radius-md: 8px;
+    --image-small: 6rem;
+    --image-about: 12rem;
+    --header-min-height: 18rem;
+    --border-thin: 1px;
+    --border-medium: 2px;
+    --border-heavy: 4px;
+    --transition-fast: 0.2s;
  
     /* Effects */
     --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -80,13 +88,12 @@ p:last-child { margin-bottom: 0; }
 a { color: var(--color-accent); }
 
 a:focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: var(--border-medium) solid var(--color-accent);
     outline-offset: 2px;
 }
  
 ul { list-style: none; }
 /* ============================
-   /* ==========================
    4. LAYOUT
    Breakpoints used in this file:
      768px  — tablet and larger
@@ -110,7 +117,7 @@ ul { list-style: none; }
 }
 
 .nav-container > * {
-    min-width: 12rem;
+    min-width: var(--column-min);
 }
 
 .nav-links {
@@ -142,23 +149,23 @@ header {
     background-color: var(--color-surface-alt);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-card);
-    min-height: 18rem;
+    min-height: var(--header-min-height);
     margin-bottom: var(--space-xl);
 }
  
 header div {
     flex: 1;
-    min-width: 12rem;
+    min-width: var(--column-min);
 }
  
  
 /* nav + section spacing */
-nav a {
+.nav-links a {
     color: var(--color-text);
     text-decoration: none;
-    transition: color 0.2s;
+    transition: color var(--transition-fast);
 }
-nav a:hover {
+.nav-links a:hover {
     color: var(--color-accent);
 }
  
@@ -187,14 +194,14 @@ section, aside {
  
 #projects, #contact, #resources {
     background-color: var(--color-surface-alt);
-    border-left: 4px solid var(--color-border-strong);
+    border-left: var(--border-heavy) solid var(--color-border-strong);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-card);
     padding: var(--space-lg);
 }
  
 .project-card {
-    border: 1px solid var(--color-border);
+    border: var(--border-thin) solid var(--color-border);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     padding: var(--space-md);
@@ -202,7 +209,7 @@ section, aside {
  
 .project-card time {
     color: var(--color-text-muted);
-    font-size: 0.9rem;
+    font-size: var(--text-small);
 }
  
 #contact ul {
@@ -223,7 +230,7 @@ section, aside {
  
 #resources strong {
     display: inline-block;
-    border-top: 2px solid var(--color-accent);
+    border-top: var(--border-medium) solid var(--color-accent);
     padding-top: var(--space-sm);
 }
  
@@ -231,7 +238,7 @@ footer {
     padding: 0 var(--space-xl) var(--space-xl);
     text-align: center;
     color: var(--color-text-muted);
-    font-size: 0.9rem;
+    font-size: var(--text-small);
 }
  
 #skills {
@@ -247,7 +254,7 @@ footer {
 
 .about-image {
     flex: 1;
-    min-width: 12rem;
+    min-width: var(--column-min);
 }
 
 .about-image img {
@@ -256,14 +263,14 @@ footer {
 }
 
 .about-photo {
-    width: 12rem;
+    width: var(--image-about);
     border-radius: var(--radius-md);
     margin-top: var(--space-sm);
 }
 
 .about-text {
     flex: 2;
-    min-width: 12rem;
+    min-width: var(--column-min);
     max-width: var(--reading-width);
 }
 
@@ -283,7 +290,7 @@ footer {
     list-style: none;
     padding-left: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(var(--column-min), 1fr));
     gap: var(--space-md);
 }
  
@@ -303,7 +310,7 @@ footer {
 }
  
 .mini-photos img {
-    width: 6rem;
+    width: var(--image-small);
     border-radius: var(--radius-md);
     aspect-ratio: 1 / 1;
     object-fit: cover;
