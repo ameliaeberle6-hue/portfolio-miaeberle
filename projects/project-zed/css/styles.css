@@ -1,0 +1,721 @@
+:root {
+    --color-page: #ceb9e4;
+    --color-surface: #ffffff;
+    --color-text: #05000a;
+    --color-muted: #40536b;
+    --color-primary: #3f177e;
+    --color-primary-hover: #220441;
+    --color-error: #8b1e1e;
+    --color-focus: #a33b00;
+    --space-small: 0.5rem;
+    --space-medium: 1rem;
+    --space-large: 1.5rem;
+    --space-card: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-page);
+    color: var(--color-text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.site-header,
+.site-footer {
+    padding: var(--space-large) var(--space-medium);
+    text-align: center;
+}
+
+.site-header {
+    padding: var(--space-large) var(--space-medium);
+}
+
+/* NEW: Give Super Frog a large, centered place above the title. */
+.super-frog {
+    position: relative;
+    width: 180px;
+    margin: 0 auto var(--space-medium);
+}
+
+.super-frog img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* NEW: Place the cap over Super Frog's head so he appears to be wearing it. */
+.graduation-cap {
+    position: absolute;
+    top: 0.25rem;
+    left: calc(28% - 3rem);
+    z-index: 1;
+    font-size: 4.5rem;
+    line-height: 1;
+    transform: rotate(-18deg);
+}
+
+.site-header h1 {
+    margin: 0;
+    color: var(--color-primary);
+    background: linear-gradient(110deg, #321064, #8546bd 55%, #3f177e);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(2.75rem, 8vw, 4.5rem);
+    font-weight: 900;
+    letter-spacing: -0.055em;
+    line-height: 1.05;
+    text-shadow: 0 0.125rem 0.75rem rgb(63 23 126 / 18%);
+}
+
+.site-header h1::after {
+    display: block;
+    width: 5rem;
+    height: 0.25rem;
+    margin: 0.625rem auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #8546bd, #3f177e);
+    content: "";
+}
+
+.site-header p,
+.site-footer p {
+    margin: var(--space-small) 0 0;
+    color: var(--color-muted);
+}
+
+.site-header p {
+    max-width: 38rem;
+    margin: var(--space-medium) auto 0;
+    color: #30223e;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-small);
+    padding: 0 var(--space-medium);
+}
+
+.site-nav a {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 999px;
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a.is-current {
+    background: var(--color-primary);
+    color: var(--color-surface);
+}
+
+.page-content {
+    width: min(100% - 2rem, 38rem);
+    margin: auto;
+    padding: var(--space-medium) 0;
+}
+
+.countdown-card {
+    width: min(100% - 2rem, 48rem);
+    margin: 0 auto var(--space-medium);
+    padding: var(--space-large);
+    border: 2px solid var(--color-primary);
+    border-radius: 1rem;
+    background: var(--color-surface);
+    box-shadow: 0 0.5rem 1.5rem rgb(63 23 126 / 16%);
+    text-align: center;
+}
+
+.bucket-list-card {
+    margin-top: var(--space-large);
+    padding: var(--space-card);
+    border-radius: 0.75rem;
+    background: var(--color-surface);
+    box-shadow: 0 0.25rem 1rem rgb(23 43 67 / 12%);
+}
+
+.pace-card {
+    margin-top: var(--space-large);
+    padding: var(--space-card);
+    border-radius: 0.75rem;
+    background: var(--color-surface);
+    box-shadow: 0 0.25rem 1rem rgb(23 43 67 / 12%);
+    overflow: hidden;
+    position: relative;
+}
+
+.pace-card::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 0.375rem;
+    background: linear-gradient(90deg, #7d4ab8, #d3a6ed, #7d4ab8);
+    content: "";
+}
+
+.countdown-card h2 {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.countdown-message {
+    margin: 0 0 var(--space-medium);
+    color: var(--color-muted);
+    font-size: 0.8125rem;
+}
+
+.countdown-clock {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-small);
+    margin: 0 auto var(--space-large);
+}
+
+.countdown-unit {
+    padding: 0.625rem 0.25rem;
+    border: 2px solid #b79bd4;
+    border-radius: 0.625rem;
+    background: #f8f4fc;
+}
+
+.countdown-number,
+.countdown-unit-label {
+    display: block;
+}
+
+.countdown-number {
+    color: var(--color-primary);
+    font-size: clamp(1.75rem, 8vw, 3.25rem);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+}
+
+.countdown-unit-label {
+    color: var(--color-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.countdown-date-form {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    text-align: left;
+}
+
+.countdown-date-form label {
+    grid-column: 1 / -1;
+}
+
+.countdown-date-form button {
+    margin-top: 0;
+}
+
+.bucket-list-card h2 {
+    margin: 0 0 var(--space-large);
+    color: var(--color-primary);
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.pace-card h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.pace-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-medium);
+}
+
+.pace-eyebrow {
+    margin: 0 0 0.125rem;
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.pace-label {
+    flex: 0 0 auto;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: #eee7f6;
+    color: var(--color-primary);
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.pace-overview {
+    display: grid;
+    grid-template-columns: 10rem minmax(0, 1fr);
+    align-items: center;
+    gap: var(--space-large);
+    margin-top: var(--space-large);
+}
+
+.pace-progress {
+    display: grid;
+    width: 10rem;
+    aspect-ratio: 1;
+    place-items: center;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--color-primary) var(--pace-progress, 0%),
+        #eadff4 var(--pace-progress, 0%)
+    );
+}
+
+.pace-progress-center {
+    display: flex;
+    width: calc(100% - 1.25rem);
+    aspect-ratio: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--color-surface);
+}
+
+.pace-progress-center strong {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    line-height: 1.1;
+}
+
+.pace-progress-center span {
+    color: var(--color-muted);
+    font-size: 0.875rem;
+}
+
+.pace-details {
+    min-width: 0;
+}
+
+.countdown-message {
+    margin: var(--space-medium) 0 var(--space-large);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.pace-message {
+    min-height: 3em;
+    margin: 0 0 var(--space-medium);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.pace-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-small);
+    padding-top: var(--space-medium);
+    border-top: 1px solid #e7deef;
+}
+
+.pace-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.pace-stat strong {
+    color: var(--color-primary);
+    font-size: 1.375rem;
+}
+
+.pace-stat span {
+    color: var(--color-muted);
+    font-size: 0.75rem;
+    line-height: 1.3;
+}
+
+form {
+    display: grid;
+    gap: var(--space-small);
+}
+
+label {
+    font-weight: 700;
+}
+
+input,
+select,
+textarea,
+button {
+    min-height: 2.75rem;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid var(--color-muted);
+    border-radius: 0.375rem;
+    font: inherit;
+}
+
+input {
+    background: var(--color-surface);
+    color: var(--color-text);
+}
+
+select {
+    background: var(--color-surface);
+    color: var(--color-text);
+}
+
+button {
+    margin-top: var(--space-small);
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-surface);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: var(--color-primary-hover);
+    background: var(--color-primary-hover);
+}
+
+/* Keep the keyboard focus easy to spot on every interactive control. */
+:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
+.form-message {
+    min-height: 1.5em;
+    margin: var(--space-medium) 0 0;
+    color: var(--color-error);
+}
+
+.list-status {
+    min-height: 1.5em;
+    margin: var(--space-medium) 0 0;
+    color: var(--color-muted);
+}
+
+.bucket-list {
+    display: grid;
+    gap: var(--space-small);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bucket-list-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--space-medium);
+    padding: var(--space-medium);
+    border: 1px solid var(--color-muted);
+    border-radius: 0.375rem;
+}
+
+/* NEW: Keep each bucket-list completion checkbox easy to see and use. */
+.bucket-checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+    accent-color: var(--color-primary);
+}
+
+.bucket-item-name {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.bucket-item-name.is-done {
+    text-decoration: line-through;
+}
+
+.item-tag {
+    flex: 0 0 auto;
+    padding: 0.125rem 0.5rem;
+    border-radius: 999px;
+    background: var(--color-page);
+    color: var(--color-text);
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.site-footer {
+    margin-top: auto;
+}
+
+.applications-intro,
+.application-form-card,
+.application-list-card {
+    padding: var(--space-card);
+    border-radius: 0.75rem;
+    background: var(--color-surface);
+    box-shadow: 0 0.25rem 1rem rgb(23 43 67 / 12%);
+}
+
+.application-form-card,
+.application-list-card {
+    margin-top: var(--space-large);
+}
+
+.applications-intro h2,
+.application-form-card h2,
+.application-list-card h2 {
+    margin: 0 0 var(--space-small);
+    font-size: 1.5rem;
+}
+
+.applications-intro h2 {
+    color: var(--color-primary);
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.applications-intro p {
+    margin: 0;
+    color: var(--color-muted);
+}
+
+.application-stats {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--space-small);
+    margin-top: var(--space-medium);
+}
+
+.application-stat {
+    padding: var(--space-medium);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.application-stat strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: 1.75rem;
+}
+
+.application-stat span {
+    display: block;
+    font-size: 0.875rem;
+}
+
+.application-controls {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(10rem, 0.55fr);
+    gap: var(--space-medium);
+    margin: var(--space-medium) 0;
+}
+
+.application-controls label {
+    display: grid;
+    gap: var(--space-small);
+}
+
+.application-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.application-form .form-field {
+    display: grid;
+    gap: var(--space-small);
+}
+
+.application-form .form-field-wide,
+.application-form button {
+    grid-column: 1 / -1;
+}
+
+.application-list {
+    display: grid;
+    gap: var(--space-medium);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.application-item {
+    padding: var(--space-medium);
+    border: 1px solid #b8a5cf;
+    border-radius: 0.5rem;
+}
+
+.application-item-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-medium);
+}
+
+.application-item h3 {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.application-company {
+    margin: 0.125rem 0 var(--space-small);
+    color: var(--color-muted);
+}
+
+.application-status {
+    flex: 0 0 auto;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    background: #eee7f6;
+    color: var(--color-primary);
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.application-status.status-interviewing {
+    background: #fff1cc;
+    color: #654500;
+}
+
+.application-status.status-accepted {
+    background: #e2f5e8;
+    color: #14552b;
+}
+
+.application-status.status-denied {
+    background: #fbe6e6;
+    color: #7a2020;
+}
+
+.application-meta,
+.application-notes {
+    margin: var(--space-small) 0 0;
+    overflow-wrap: anywhere;
+}
+
+.application-reminder {
+    color: var(--color-error);
+    font-weight: 700;
+}
+
+.application-item-actions {
+    display: flex;
+    align-items: end;
+    gap: var(--space-small);
+    margin-top: var(--space-medium);
+}
+
+.application-item-actions label {
+    display: grid;
+    flex: 1;
+    gap: var(--space-small);
+}
+
+.application-item-actions button {
+    margin-top: 0;
+    border-color: var(--color-error);
+    background: var(--color-surface);
+    color: var(--color-error);
+}
+
+.application-item-actions button:hover {
+    background: #fff0f0;
+}
+
+.application-empty {
+    padding: var(--space-medium);
+    border: 1px dashed #b8a5cf;
+    border-radius: 0.5rem;
+    color: var(--color-muted);
+    text-align: center;
+}
+
+@media (max-width: 30rem) {
+    .pace-card,
+    .bucket-list-card,
+    .applications-intro,
+    .application-form-card,
+    .application-list-card {
+        padding: var(--space-large);
+    }
+
+    .application-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .application-controls,
+    .application-form {
+        grid-template-columns: 1fr;
+    }
+
+    .countdown-card {
+        padding: var(--space-medium);
+    }
+
+    .countdown-clock {
+        gap: 0.375rem;
+    }
+
+    .countdown-unit {
+        padding: 0.5rem 0.125rem;
+    }
+
+    .countdown-unit-label {
+        font-size: 0.625rem;
+    }
+
+    .countdown-date-form {
+        grid-template-columns: 1fr;
+    }
+
+    .countdown-date-form label {
+        grid-column: auto;
+    }
+
+    .pace-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .pace-overview {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: var(--space-medium);
+    }
+
+    .pace-details {
+        width: 100%;
+    }
+
+    .pace-message {
+        text-align: center;
+    }
+
+    .application-form .form-field-wide,
+    .application-form button {
+        grid-column: auto;
+    }
+
+    .application-item-header,
+    .application-item-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}

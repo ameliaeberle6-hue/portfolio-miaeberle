@@ -1,17 +1,23 @@
-# Mia Eberle — Personal Portfolio
+# Mia Eberle — Course Portfolio
 
-A portfolio site built from scratch in HTML and CSS for WRIT 40363.
-It introduces who I am, what I am learning, and the work I have made.
+My course portfolio for WRIT 40363, bringing together my living portfolio and archived snapshots of my course projects.
 
-**Live site:** https://ameliaeberle6-hue.github.io/portfolio-miaeberle/index.html 
+**Live site:** https://ameliaeberle6-hue.github.io/portfolio-miaeberle/
+
+## About
+
+The portfolio root is the living site and will continue to evolve. The `projects/` folder contains project snapshots and a placeholder for the next project.
+
+## Projects
+
+- [Project 1 — Original Portfolio](projects/project1-original/)
+- [Project 2 — Local Favorites Tracker](projects/project2-tracker/)
+- [Project 3 — Personal Dashboard](projects/project3-dashboard/)
+- [Project Zed — Before I Walk](projects/project-zed/)
 
 ## Built with
 
 - Semantic HTML5
 - CSS with design tokens, Flexbox, and Grid
+- JavaScript
 - Git and GitHub Pages
-
-## Notes
-
-The accent color and font pairing were chosen in Lab 10.5. Contrast
-was verified against WCAG AA.
