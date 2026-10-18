@@ -3,133 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mia Eberle | Portfolio</title>
+    <meta name="description" content="Mia Eberle's portfolio of web projects in communications, data, and digital storytelling.">
+    <title>Mia Eberle | Digital Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-<div class="page">
+<body class="portfolio-home">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page">
+        <nav class="nav-container" aria-label="Main navigation">
+            <a class="site-name" href="index.html">Mia Eberle</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
 
-<div class="nav-container">
-    <a class="site-name" href="index.html">Mia Eberle</a>
-    <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="index.html#contact">Contact</a>
-    </nav>
-</div>
+        <header class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Digital communication · Data · Web</p>
+                <h1>Hi, I’m Mia.</h1>
+                <p class="hero-lede">I’m a TCU senior building clear, useful digital experiences at the intersection of communication, analytics, and technology.</p>
+                <a class="button-link" href="#projects">Explore my work</a>
+            </div>
+            <img class="hero-image" src="images/IMG_PORTRAIT_7.JPG" alt="Mia Eberle, TCU student and digital communications professional">
+        </header>
 
+        <main id="main">
+            <section id="about" class="content-section about-section" aria-labelledby="about-title">
+                <p class="eyebrow">A little about me</p>
+                <h2 id="about-title">Creative thinking, backed by data.</h2>
+                <p>I’m studying Strategic Communication and Digital Culture and Data Analytics at Texas Christian University. My experience in social media, advertising, and sports communications taught me to pair strong storytelling with measurable goals.</p>
+                <p>This semester, I grew from building a simple HTML and CSS portfolio to creating interactive JavaScript applications, working with JSON data, and deploying projects to GitHub Pages. I’m leaving with more confidence in how I plan, build, test, and improve for the people using what I make.</p>
+                <p><a href="about.html">Explore my work experience</a></p>
+            </section>
 
-<header>
-    <div class="header-text">
-        <h1>Welcome to my page!</h1>
-            <p>Senior at TCU double majoring in Strategic Communications and Digital Culture and Data Analytics. Most of the work I have done in the past has been social media based, but I am excited to show off another side of what I am learning!</p>
+            <section id="projects" class="content-section" aria-labelledby="projects-title">
+                <div class="section-heading">
+                    <p class="eyebrow">Selected course work</p>
+                    <h2 id="projects-title">Projects</h2>
+                    <p>Four projects show how my work grew from a first portfolio into interactive tools for everyday life.</p>
+                </div>
+                <ul class="project-list">
+                    <li class="project-card">
+                        <p class="project-number">01 / Portfolio</p>
+                        <h3><a href="projects/project1-original/index.html">Personal Portfolio</a></h3>
+                        <p>My first portfolio introduces my background, work experience, and goals. It was the starting point for learning semantic page structure and styling a site from scratch.</p>
+                        <p class="technology-list"><strong>Built with:</strong> HTML, CSS, GitHub Pages</p>
+                    </li>
+                    <li class="project-card">
+                        <p class="project-number">02 / JavaScript app</p>
+                        <h3><a href="projects/project2-tracker/index.html">Local Favorites Tracker</a></h3>
+                        <p>This app helps people save favorite local places, add notes, and find entries with search and category filters. Favorites persist in the browser between visits.</p>
+                        <p class="technology-list"><strong>Built with:</strong> HTML, CSS, JavaScript, localStorage</p>
+                    </li>
+                    <li class="project-card">
+                        <p class="project-number">03 / Data dashboard</p>
+                        <h3><a href="projects/project3-dashboard/index.html">Personal Dashboard</a></h3>
+                        <p>A responsive dashboard brings weather, quotes, and a task list together in one place. It loads content from local JSON files and saves tasks and theme preferences in the browser.</p>
+                        <p class="technology-list"><strong>Built with:</strong> HTML, CSS, JavaScript, JSON, localStorage</p>
+                    </li>
+                    <li class="project-card">
+                        <p class="project-number">04 / AI-assisted web app</p>
+                        <h3><a href="projects/project-zed/index.html">Before I Walk</a></h3>
+                        <p>This senior-year planner combines a graduation countdown and bucket list with a job-application tracker. I used AI-assisted development as part of building the app, then brought its pages and assets together as a working project.</p>
+                        <p class="technology-list"><strong>Built with:</strong> HTML, CSS, JavaScript, localStorage, AI-assisted development</p>
+                        <p><a href="https://ameliaeberle6-hue.github.io/projectZED/" target="_blank" rel="noopener noreferrer">Visit the live Project Zed site</a></p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="skills" class="content-section" aria-labelledby="skills-title">
+                <div class="section-heading">
+                    <p class="eyebrow">What I bring</p>
+                    <h2 id="skills-title">Skills I developed</h2>
+                </div>
+                <ul class="skills-grid">
+                    <li class="skill-card">
+                        <h3>Front-end foundations</h3>
+                        <p>Semantic HTML, responsive CSS, layout systems, and accessible page structure.</p>
+                    </li>
+                    <li class="skill-card">
+                        <h3>JavaScript &amp; data</h3>
+                        <p>DOM interactions, forms, filtering, JSON data, and browser storage.</p>
+                    </li>
+                    <li class="skill-card">
+                        <h3>Workflow &amp; deployment</h3>
+                        <p>Git and GitHub workflows, organizing project files, and publishing with GitHub Pages.</p>
+                    </li>
+                    <li class="skill-card">
+                        <h3>Accessible design</h3>
+                        <p>Semantic landmarks, descriptive labels, keyboard focus, responsive layouts, and meaningful image text.</p>
+                    </li>
+                    <li class="skill-card">
+                        <h3>AI-assisted development</h3>
+                        <p>Using AI as a development aid while keeping the finished project organized and usable.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="contact" class="content-section contact-section" aria-labelledby="contact-title">
+                <p class="eyebrow">Let’s connect</p>
+                <h2 id="contact-title">Get in touch</h2>
+                <p>I’m looking for full-time opportunities starting January 2027 and would love to connect.</p>
+                <ul class="contact-links">
+                    <li><a href="mailto:mia.eberle@tcu.edu">mia.eberle@tcu.edu</a></li>
+                    <li><a href="https://github.com/ameliaeberle6-hue" target="_blank" rel="noopener noreferrer">GitHub profile</a></li>
+                </ul>
+            </section>
+        </main>
     </div>
-       <div class="header-pic">
-        <img src="images/IMG_2.JPG" alt="Me at the TCU Ireland game!">
-    </div>
-</header>
 
-<main>
-    <section id="learn">
-        <h2>What I Want to Learn</h2>
-        <p> I really want to build my confidence when it comes to coding. For so long I have just avoided it and made excuses, but I am ready to face the challenge and improve! </p>
-    </section>
-</main>
-
-
-
-<section id="skills">
-    <h2>My Skills</h2>
-    <ul class="skills-grid">
-        <li class="skill-card">
-            <h3>Social Media</h3>
-            <p>I have been working in social media for 5 years (since I was a senior in high school)! I have seen all different types of trends and worked in many different fields!</p>
-        </li>
-        <li class="skill-card">
-            <h3>Advertising</h3>
-            <p>I worked with 2 real life clients at TCU's in house ad agency ROXO! I led as the Social Media Manager for both clients!</p>
-        </li>
-        <li class="skill-card">
-            <h3>Data Analytics</h3>
-            <p> I am confident in my data analysis skills across multiple platforms, especially social media and sports analysis!</p>
-        </li>
-        <li class="skill-card">
-            <h3>Coding</h3>
-            <p> I have grown so much in my coding abilities, and I am a fast learner! I am excited to continue improving!</p>
-        </li>
-    </ul>
-</section>
-
-<div class="mini-photos">
-    <img src="images/IMG_BR_3.JPG" alt="Me at one of my internships">
-    <img src="images/IMG_FOOTBALL_4.JPG" alt="Me at Football Fall camp">
-    <img src="images/IMG_WELMAN_5.JPG" alt="Me at one of the client while working at ROXO">
-</div>
-
-<section class="about">
-    <div class="about-image">
-        <figure>
-            <img src="images/IMG_PORTRAIT_7.JPG" alt="Me working on projects and my headshot! Go Frogs!">
-            <figcaption>Me working on projects and my headshot! Go Frogs!</figcaption>
-        </figure>
-    </div>
-    <div class="about-text">
-        <h2 id="about">About Mia</h2>
-            <p>Senior at TCU studying Strategic Communications and Digital Culture and Data Analytics. I am originally from Georgia but have loved my time in Fort Worth for the past few years! My experience in social media, advertising and analytics helps me bring both creative ideas and measurable goals to each project! I am currently looking for a post-grad job where I can expand my skills, be part of a great team, and work for a bigger purpose!</p>
-        <p><a href="about.html">See my full work experience</a></p>
-    </div>
-</section>
-
-<section id="projects">
-    <h2>Projects</h2>
-    <ul class="project-list">
-        <li class="project-card">
-            <h3><a href="projects/project1-original/">Project 1: Original Portfolio</a></h3>
-            <p>An archived snapshot of my first portfolio site.</p>
-        </li>
-        <li class="project-card">
-            <h3><a href="projects/project2-tracker/">Project 2: Local Favorites Tracker</a></h3>
-            <p>A JavaScript app for saving, searching, and filtering favorite local spots.</p>
-        </li>
-        <li class="project-card">
-            <h3><a href="projects/project3-dashboard/">Project 3: Personal Dashboard</a></h3>
-            <p>A dashboard with weather, quotes, tasks, and a theme toggle.</p>
-        </li>
-        <li class="project-card">
-            <h3><a href="projects/project-zed/">Project Zed: Before I Walk</a></h3>
-            <p>A senior-year planner with a graduation countdown, bucket list, and job-hunt tracker.</p>
-        </li>
-    </ul>
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-    <p>The best way to reach me is by email!</p>
-    <ul>
-        <li><a href="mailto:mia.eberle@tcu.edu">school email: mia.eberle@tcu.edu</a></li>
-        <li><a href="mailto:miaeberle@icloud.com">personal email: miaeberle@icloud.com</a></li>
-        <li><a href="https://github.com/ameliaeberle6-hue" target="_blank" rel="noopener">My GitHub</a></li>
-    </ul>
-    <p>I am excited to connect with you!</p>
-    <p><strong>Available for full time roles starting January 2027.</strong></p>
-</section>
-
-<aside id="resources">
-    <h2>Resources</h2>
-    <ul>
-        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a> — the reference I use when I get stuck.</li>
-        <li><a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS-Tricks</a> — clear writeups of layout techniques.</li>
-        <li><a href="https://web.dev/" target="_blank" rel="noopener">web.dev</a> — Google's guides on building for the modern web.</li>
-    </ul>
-
-    <p>I build <em>accessible</em> websites — every page works with a keyboard.</p>
-
-
-    <p><a href="#about">Jump to the About section</a></p>
-</aside>
-</main>
-</div>
-
-<footer>
-    <p>&copy; 2026 Mia Eberle · Personal Portfolio</p>
-</footer>
+    <footer class="site-footer">
+        <p>&copy; 2026 Mia Eberle <span aria-hidden="true">·</span> Built with HTML and CSS</p>
+    </footer>
+</body>
+</html>
