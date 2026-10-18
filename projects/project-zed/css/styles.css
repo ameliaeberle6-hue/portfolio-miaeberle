@@ -40,30 +40,6 @@ body {
     padding: var(--space-large) var(--space-medium);
 }
 
-/* NEW: Give Super Frog a large, centered place above the title. */
-.super-frog {
-    position: relative;
-    width: 180px;
-    margin: 0 auto var(--space-medium);
-}
-
-.super-frog img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* NEW: Place the cap over Super Frog's head so he appears to be wearing it. */
-.graduation-cap {
-    position: absolute;
-    top: 0.25rem;
-    left: calc(28% - 3rem);
-    z-index: 1;
-    font-size: 4.5rem;
-    line-height: 1;
-    transform: rotate(-18deg);
-}
-
 .site-header h1 {
     margin: 0;
     color: var(--color-primary);
